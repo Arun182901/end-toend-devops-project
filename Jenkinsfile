@@ -22,7 +22,7 @@ pipeline {
                     -Dsonar.projectKey=flask-app \
                     -Dsonar.sources=. \
                     -Dsonar.host.url=http://YOUR_SERVER_IP:9000 \
-                    -Dsonar.login=YOUR_TOKEN
+                    -Dsonar.login=12390
                     '''
                 }
             }
