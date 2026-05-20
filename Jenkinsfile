@@ -23,7 +23,7 @@ pipeline {
                withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
                sh """
                ${scannerHome}/bin/sonar-scanner \
-               -Dsonar.projectKey=flask-app \
+               -Dsonar.projectKey=flask-app-py \
                -Dsonar.sources=. \
                -Dsonar.host.url=http://34.122.36.4:9000 \
                -Dsonar.login=${SONAR_TOKEN}
