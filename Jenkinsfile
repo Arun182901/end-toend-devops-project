@@ -11,7 +11,7 @@ pipeline {
         }
         stage('OWASP Dependency Check') {
             steps {
-                dependencyCheck odcInstallation: 'dependency-check', additionalArguments: '--scan ./'
+                dependencyCheck odcInstallation: 'Dependency-Check', additionalArguments: '--scan ./'
             }
         }
         stage('SonarQube Analysis') {
