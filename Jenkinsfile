@@ -11,7 +11,7 @@ pipeline {
         }
         stage('OWASP Dependency Check') {
             steps {
-                dependencyCheck additionalArguments: '--scan ./'
+                dependencyCheck odcInstallation: 'dependency-check', additionalArguments: '--scan ./'
             }
         }
         stage('SonarQube Analysis') {
@@ -39,7 +39,7 @@ pipeline {
         }
         stage('Docker Push') {
             steps {
-                withDockerRegistry([credentialsId: 'dockerhub']) {
+                withDockerRegistry([url: 'https://index.docker.io/v1/', credentialsId: 'dockerhub']) {
                     sh 'docker push $IMAGE_NAME:$BUILD_NUMBER'
                 }
             }
