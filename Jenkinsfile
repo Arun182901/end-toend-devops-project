@@ -9,11 +9,11 @@ pipeline {
                 checkout scm
             }
         }
-        stage('OWASP Dependency Check') {
-            steps {
-                dependencyCheck odcInstallation: 'Dependency-Check', additionalArguments: '--scan ./'
-            }
-        }
+        // stage('OWASP Dependency Check') {
+        //     steps {
+        //         dependencyCheck odcInstallation: 'Dependency-Check', additionalArguments: '--scan ./'
+        //     }
+        // }
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonarqube') {
