@@ -4,9 +4,9 @@ pipeline {
         IMAGE_NAME = "Arunsin/flask-devops"
     }
     stages {
-        stage('Pull Code') {
+        stage('Checkout') {
             steps {
-                git 'https://github.com/Arun182901/end-toend-devops-project.git'
+                checkout scm
             }
         }
         stage('OWASP Dependency Check') {
