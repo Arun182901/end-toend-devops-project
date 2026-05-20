@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Pull Code') {
             steps {
-                git 'YOUR_GITHUB_REPO'
+                git 'https://github.com/Arun182901/end-toend-devops-project.git'
             }
         }
         stage('OWASP Dependency Check') {
