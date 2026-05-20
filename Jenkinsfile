@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        IMAGE_NAME = "Arunsin/flask-devops"
+        IMAGE_NAME = "arunsin/flask-devops"
     }
     stages {
         stage('Checkout') {
