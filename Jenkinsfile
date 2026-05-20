@@ -21,7 +21,7 @@ pipeline {
                     sonar-scanner \
                     -Dsonar.projectKey=flask-app \
                     -Dsonar.sources=. \
-                    -Dsonar.host.url=http://YOUR_SERVER_IP:9000 \
+                    -Dsonar.host.url=http://34.122.36.4:9000 \
                     -Dsonar.login=12390
                     '''
                 }
